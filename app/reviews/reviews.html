@@ -1,0 +1,17 @@
+<h4 class="text-center">Reviews for {{reviewedCoffee.brand}}</h2>
+<div class="table table-hover table-condensed">
+<table class="table">
+    <tr>
+        <th>Reviewer</th>
+        <th>Comment</th>
+        <th>Rating</th>
+    </tr>
+    <tr ng-repeat="r in reviewedCoffee.reviews">
+        <td>{{r.reviewer}}</td>
+        <td>{{r.comment}}</td>
+        <td>{{r.rating}}</td>
+    </tr>
+</table>
+</div>
+<br />
+<div class="text-center"><b>Or Find a Review: </b><input type="text" ng-model="query" id="search" placeholder="Review Attribute" /><br /></div>

@@ -1,0 +1,21 @@
+<h4 class="text-center">Coffee Listings</h4>
+<div class="table table-hover table-condensed table-striped">
+    <br />
+    <table class="table">
+        <tr>
+            <th>  Brand</th>
+            <th>  Coffee</th>
+            <th>  Country</th>
+            <th class="text-right">  Look at Reviews</th>
+        </tr>
+        <tr ng-repeat="coffee in coffees | filter:query | orderBy:'coffee.name'">
+            <td>{{coffee.brand}}</td>
+            <td>{{coffee.name}}</td>
+            <td>{{coffee.country}}</td>
+            <td class="text-right"><a href="/#!/reviews/{{coffee.id}}">Reviews</a></td>
+        </tr>
+    </table>
+</div>
+<br />
+<div class="text-center"><b>Or Find a Coffee: </b><input type="text" ng-model="query" id="search" placeholder="Coffee Attribute" /><br /></div>
+<br />
